@@ -37,8 +37,8 @@
                                 <ul class="s-header-v2__nav">
                                     <li class="s-header-v2__nav-item"><a href="#home" class="s-header-v2__nav-link">Home</a></li>
                                     <li class="s-header-v2__nav-item"><a href="#about" class="s-header-v2__nav-link">About Us</a></li>
-                                    <li class="s-header-v2__nav-item"><a href="#reg" class="s-header-v2__nav-link">Register</a></li>
-                                        <li class="s-header-v2__nav-item"><a href="exam/index.php" class="s-header-v2__nav-link">Student Portal</a></li>
+                                    <li class="s-header-v2__nav-item"><a href="#reg" class="s-header-v2__nav-link" onclick="sign()">Register</a></li>
+                                        <li class="s-header-v2__nav-item"><a href="#login" class="s-header-v2__nav-link" onclick="login()">Login</a></li>
                                     <li class="s-header-v2__nav-item"><a href="#faq" class="s-header-v2__nav-link">FAQs</a></li>
                                     <li class="s-header-v2__nav-item"><a href="#contact" class="s-header-v2__nav-link">Contact</a></li>
                                 </ul>
@@ -316,8 +316,38 @@
           </form>
         </div>
       </div>
+<script>
+function login() {
+  document.getElementById("reg").style.display = "none";
+   document.getElementById("login").style.display = "block";
+}
 
+function sign() {
+   document.getElementById("reg").style.display = "block";
+   document.getElementById("login").style.display = "none";
+}
+</script>
+  <div id="login"  style="display: none;" class="bg_element">
+    <!-- <h2 class="g-text-center--xs g-font-size-22--xs g-font-size-36--md g-color--white g-padding-y-20--xs g-padding-y-60--sm">Register Now</h2> -->
+    <div class="g-fullheight--md g-container--md g-text-center--xs g-ver-left--md g-padding-y-120--xs g-padding-y-300--md" >
+      <div class="g-margin-b-60--xs">
+        <p class="text-uppercase g-font-size-20--xs g-font-weight--700 g-letter-spacing--2" style="color: #0079bf">Register Here</p>
+    </div>
 
+    <form class="center-block g-width-500--sm g-width-550--md" role="form" method="post" action="exam/login.php">
+              <div class="g-margin-b-30--xs">
+                  <input type="email" class="form-control s-form-v3__input" placeholder="* EMAIL" name="email" required>
+              </div>
+           
+              	  <div class="g-margin-b-30--xs">
+                  <input type="password" class="form-control s-form-v3__input" placeholder="* PASSWORD" name="password" required>
+              </div>
+              <div class="g-text-center--xs">
+                  <button type="submit" class="text-uppercase s-btn s-btn--md s-btn--white-bg g-radius--50 g-padding-x-70--xs g-margin-b-20--xs" name="login">Submit</button>
+              </div>
+          </form>
+        </div>
+      </div>
 
         <!-- FAQ -->
         <div class="s-faq" id="faq">
